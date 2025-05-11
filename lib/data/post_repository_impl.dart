@@ -1,5 +1,5 @@
-import 'package:post_viewer/post_model.dart';
-import 'package:post_viewer/post_repository.dart';
+import 'package:post_viewer/domain/model/post_model.dart';
+import 'package:post_viewer/domain/post_repository.dart';
 import 'package:dio/dio.dart';
 
 

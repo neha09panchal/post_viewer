@@ -1,6 +1,6 @@
-import 'package:post_viewer/post_model.dart';
-import 'package:post_viewer/post_repository_impl.dart';
-import 'package:post_viewer/posts_state.dart';
+import 'package:post_viewer/domain/model/post_model.dart';
+import 'package:post_viewer/data/post_repository_impl.dart';
+import 'package:post_viewer/screens/post_screen/posts_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 

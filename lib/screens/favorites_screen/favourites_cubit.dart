@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive/hive.dart';
-import 'package:post_viewer/post_model.dart';
+import 'package:post_viewer/domain/model/post_model.dart';
 
 import 'favourites_state.dart';
 

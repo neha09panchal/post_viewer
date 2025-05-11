@@ -1,4 +1,4 @@
-import 'package:post_viewer/post_model.dart';
+import 'package:post_viewer/domain/model/post_model.dart';
 
 abstract class PostRepository{
 
