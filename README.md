@@ -12,6 +12,8 @@ This project is a starting point for a Flutter application that fetches and disp
 - Responsive UI
 - Font Family used 'Lato'
 - Images for error and app icon
+- Pull To refresh functionality
+- Favorites icon to toggle and add/remove posts to favorites list
 
 ## ArchitecturalSetup
 - Followed SOLID principles for project and accordingly folder structure is maintained
