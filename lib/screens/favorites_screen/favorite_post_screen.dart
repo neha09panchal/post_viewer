@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:post_viewer/app_theme/strings_contant.dart';
 import 'package:post_viewer/screens/article_detail_screen.dart';
 import 'package:post_viewer/screens/post_screen/posts_cubit.dart';
 
@@ -20,7 +21,7 @@ class FavoritesScreen extends StatelessWidget {
           title: Padding(
             padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
             child: Text(
-              "Favorite Posts",
+              favPosts,
               style: AppTheme.textStyle20700.copyWith(color: Colors.black),
             ),
           ),
@@ -79,7 +80,7 @@ class FavoritesScreen extends StatelessWidget {
                 ),
               );
             } else {
-              return  Center(child: Text("No favorite posts yet.",
+              return  Center(child: Text(noFavPosts,
                 style: AppTheme.textStyle20700.copyWith(
                   color: Colors.black,
                 ),

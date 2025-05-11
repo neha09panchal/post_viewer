@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:post_viewer/app_theme/strings_contant.dart';
 import 'package:post_viewer/domain/model/post_model.dart';
 
 import '../app_theme/app_theme.dart';
@@ -26,7 +27,7 @@ class _ArticleDetailScreenState extends State<ArticleDetailScreen> {
           title: Padding(
             padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
             child: Text(
-              "Posts Details",
+              postDetails,
               style: AppTheme.textStyle20700.copyWith(color: Colors.black),
             ),
           ),
@@ -65,7 +66,7 @@ class _ArticleDetailScreenState extends State<ArticleDetailScreen> {
               Row(
                 children: [
                   Text(
-                    '#Post - ',
+                    postNumber,
                     style: AppTheme.textStyle20700.copyWith(color: Colors.black),
                   ),
                   Text(
@@ -76,7 +77,7 @@ class _ArticleDetailScreenState extends State<ArticleDetailScreen> {
               ),
               SizedBox(height: 16.0),
               Text(
-                'Title:',
+                title,
                 style: AppTheme.textStyle20700.copyWith(color: Colors.black),
               ),
               Text(
@@ -86,7 +87,7 @@ class _ArticleDetailScreenState extends State<ArticleDetailScreen> {
 
               SizedBox(height: 16.0),
               Text(
-                'Description:',
+                description,
                 style: AppTheme.textStyle20700.copyWith(color: Colors.black),
               ),
               Text(

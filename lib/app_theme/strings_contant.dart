@@ -1,0 +1,10 @@
+const String trendingPost = "Trending Posts";
+const String searchHint = "Search by title or body";
+const String errorText = "Something went wrong!";
+const String retry = "Retry";
+const String postDetails = "Posts Details";
+const String postNumber = "#Post - ";
+const String title = "Title:";
+const String description = "Description:";
+const String favPosts = "Favorite Posts";
+const String noFavPosts = "No favorite posts yet.";

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:post_viewer/app_theme/app_theme.dart';
+import 'package:post_viewer/app_theme/image_constant.dart';
+import 'package:post_viewer/app_theme/strings_contant.dart';
 import 'package:post_viewer/screens/article_detail_screen.dart';
 import 'package:post_viewer/screens/post_screen/posts_cubit.dart';
 import 'package:post_viewer/screens/post_screen/posts_state.dart';
@@ -37,14 +39,14 @@ class _PostScreenState extends State<PostScreen> {
       child: Scaffold(
         appBar: AppBar(
           leading:  Image.asset(
-            'assets/images/owl.png',
+            appLogo,
           ),
           backgroundColor: AppTheme.lightPurple,
           titleSpacing: 0,
           title: Padding(
             padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
             child: Text(
-              "Trending Posts",
+              trendingPost,
               style: AppTheme.textStyle20700.copyWith(color: Colors.black),
             ),
           ),
@@ -54,7 +56,6 @@ class _PostScreenState extends State<PostScreen> {
               child: IconButton(
                 icon: Icon(Icons.favorite_rounded, size: 30),
                 color: AppTheme.red,
-                tooltip: "View Favorites",
                 onPressed: () {
                   final route = MaterialPageRoute(
                     builder: (context) {
@@ -83,7 +84,7 @@ class _PostScreenState extends State<PostScreen> {
                       ),
                       child: TextField(
                         decoration: InputDecoration(
-                          hintText: 'Search by title or body',
+                          hintText: searchHint,
                           hintStyle: AppTheme.textStyle16400.copyWith(
                             color: AppTheme.lightGrey,
                           ),
@@ -154,12 +155,12 @@ class _PostScreenState extends State<PostScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SvgPicture.asset(
-                      'assets/images/error_image.svg',
+                      errorImage,
                       width: 150,
                     ),
                     const SizedBox(height: 20),
                     Text(
-                      'Something went wrong!',
+                      errorText,
                       style: AppTheme.textStyle18700.copyWith(
                         color: Colors.black,
                       ),
@@ -180,7 +181,7 @@ class _PostScreenState extends State<PostScreen> {
                         ),
                       ),
                       child: Text(
-                        "Retry",
+                        retry,
                         style: AppTheme.textStyle16700.copyWith(
                           color: Colors.black,
                         ),
@@ -192,7 +193,7 @@ class _PostScreenState extends State<PostScreen> {
             } else {
               return Center(
                 child: CircularProgressIndicator(
-                  color: const Color(0xFFB39DDB),
+                  color: AppTheme.lightPurple,
                 ),
               );
             }
